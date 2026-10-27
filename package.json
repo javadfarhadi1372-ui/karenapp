@@ -1,0 +1,46 @@
+{
+  "name": "karen",
+  "productName": "Karen",
+  "version": "2.0.0",
+  "description": "Karen - سامانه فروش و انبار",
+  "main": "main.js",
+  "author": "Karen",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "ir.farhadi.sales",
+    "productName": "Karen",
+    "artifactName": "Karen-Setup-${version}.exe",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Karen"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "config.js",
+      "icon.ico",
+      "icon-512.png",
+      "manifest.json"
+    ]
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  }
+}

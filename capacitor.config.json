@@ -1,0 +1,7 @@
+{
+  "appId": "ir.karen.visitor",
+  "appName": "Karen",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "plugins": { "CapacitorHttp": { "enabled": true } }
+}
